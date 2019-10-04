@@ -1,5 +1,7 @@
 from teacher import PiggyParent
 import sys
+import time
+
 
 class Piggy(PiggyParent):
 
@@ -54,7 +56,44 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        print("I don't know how to dance. \nPlease give my programmer a zero.")
+        self.fun_dance()
+
+
+    def fun_dance(self):
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.stop()
+        self.servo(1000) #look right
+        time.sleep(.25)
+        self.servo(2000) #look left
+        self.servo(1000) #look right
+        time.sleep(.25)
+        self.servo(2000) #look left
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.left()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.stop
+        self.servo(1000) #look right
+        time.sleep(.25)
+        self.servo(2000) #look left
+        self.servo(1000) #look right
+        time.sleep(.25)
+        self.servo(2000) #look left
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
