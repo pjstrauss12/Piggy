@@ -62,6 +62,7 @@ class Piggy(PiggyParent):
     def fun_dance(self):
         self.right()
         time.sleep(1)
+        self.turn_by_deg(self, 90)
         self.right()
         time.sleep(1)
         self.right()
