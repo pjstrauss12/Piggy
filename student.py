@@ -61,11 +61,10 @@ class Piggy(PiggyParent):
 
     def fun_dance(self):
         self.right()
-        time.sleep(1)
+        self.stop()
         self.right()
-        time.sleep(1)
+        self.stop()
         self.right()
-        time.sleep(1)
         self.stop()
         self.servo(1000) #look right
         time.sleep(1)
