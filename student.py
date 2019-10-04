@@ -67,7 +67,6 @@ class Piggy(PiggyParent):
         self.right()
         time.sleep(1)
         self.stop()
-        self.forward(5)
         self.servo(1000) #look right
         time.sleep(.25)
         self.servo(2000) #look left
