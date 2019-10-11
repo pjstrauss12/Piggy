@@ -69,7 +69,6 @@ class Piggy(PiggyParent):
         self.servo(2000) #look left
         self.servo(1000) #look right
         time.sleep(1)
-        self.servo(2000) #look left
         time.sleep(.1)
         self.stop()
         self.right()
@@ -82,12 +81,11 @@ class Piggy(PiggyParent):
         time.sleep(.5)
         self.stop()
         time.sleep(.1)
-        self.servo(1000) #look right
+        self.servo(2000) #look right
         time.sleep(1)
-        self.servo(2000) #look left
-        self.servo(1000) #look right
+        self.servo(1000) #look left
+        self.servo(2000) #look right
         time.sleep(1)
-        self.servo(2000) #look left
         self.right()
         time.sleep(1)
         self.stop()
@@ -97,12 +95,12 @@ class Piggy(PiggyParent):
         self.right()
         time.sleep(1)
         self.stop
-        self.servo(1000) #look right
+        self.servo(2000) #look right
         time.sleep(1)
-        self.servo(2000) #look left
-        self.servo(1000) #look right
+        self.servo(1000) #look left
+        self.servo(2000) #look right
         time.sleep(1)
-        self.servo(2000) #look left
+        self.servo(1000) #look left
         self.stop()
 
     def scan(self):
