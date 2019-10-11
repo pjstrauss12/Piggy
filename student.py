@@ -64,10 +64,22 @@ class Piggy(PiggyParent):
         time.sleep(.5)
         self.stop()
         time.sleep(.1)
+        self.servo(1000) #look right
+        time.sleep(1)
+        self.servo(2000) #look left
+        self.servo(1000) #look right
+        time.sleep(1)
+        self.servo(2000) #look left
         self.right()
-        self.stop()
+        time.sleep(1)
         self.right()
+        time.sleep(1)
+        self.right()
+        time.sleep(1)
+        self.right()
+        time.sleep(.5)
         self.stop()
+        time.sleep(.1)
         self.servo(1000) #look right
         time.sleep(1)
         self.servo(2000) #look left
