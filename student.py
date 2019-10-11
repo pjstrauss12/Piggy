@@ -72,7 +72,7 @@ class Piggy(PiggyParent):
         self.servo(2000) #look left
         self.turn_by_deg(90)
         time.sleep(.1)
-        time.stop()
+        self.stop()
         self.right()
         time.sleep(1)
         self.right()
