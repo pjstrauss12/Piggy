@@ -70,6 +70,8 @@ class Piggy(PiggyParent):
         self.servo(1000) #look right
         time.sleep(1)
         self.servo(2000) #look left
+        turn_to_deg(90)
+        turn_to_deg(90)
         self.right()
         time.sleep(1)
         self.right()
@@ -88,6 +90,8 @@ class Piggy(PiggyParent):
         self.servo(2000) #look left
         self.right()
         time.sleep(1)
+        self.stop()
+        time.sleep(.1)
         self.right()
         time.sleep(1)
         self.right()
