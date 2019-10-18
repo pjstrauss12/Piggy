@@ -56,7 +56,7 @@ class Piggy(PiggyParent):
     '''
 
     def dance(self):
-        for x in range(2):
+        for x in range(3):
             self.fun_dance()
             self.turning()
             self.head_turn()
