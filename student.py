@@ -61,6 +61,7 @@ class Piggy(PiggyParent):
             self.turning()
             self.head_turn()
             self.spin()
+        self.servo(2000)
 
 
     def fun_dance(self):
