@@ -102,7 +102,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
     def spin(self):
         for x in range(4):
-            self.right
+            self.right()
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
