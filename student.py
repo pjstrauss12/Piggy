@@ -58,10 +58,7 @@ class Piggy(PiggyParent):
     def dance(self):
         """full dance"""
         for x in range(3):
-            self.fun_dance()
-            self.turning()
-            self.head_turn()
-            self.spin()
+            self.drive()
         self.servo(2000)
 
 
@@ -117,7 +114,11 @@ class Piggy(PiggyParent):
             self.right()
             time.sleep(.5)
         self.stop()
-
+    def drive(self):
+        for x in range(2):
+            self.fwd()
+            self.back()
+        self.stop()
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
