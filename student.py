@@ -58,9 +58,11 @@ class Piggy(PiggyParent):
     def dance(self):
         """full dance"""
         for x in range(3):
-            self.drive()
+            self.fun_dance()
+            self.turning()
+            self.head_turn()
+            self.spin()
         self.servo(2000)
-
 
     def fun_dance(self):
         """turns robot and looks around"""
@@ -85,6 +87,7 @@ class Piggy(PiggyParent):
         self.right()
         time.sleep(1)
         self.stop
+
     def turning(self):
         """does some turning"""
         self.stop()
@@ -98,6 +101,7 @@ class Piggy(PiggyParent):
         time.sleep(.5)
         self.stop()
         time.sleep(.1)
+        
     def head_turn(self):
         """turns servo"""
         self.servo(2000) #look right
@@ -116,13 +120,6 @@ class Piggy(PiggyParent):
             time.sleep(.5)
         self.stop()
 
-    def drive(self):
-        for x in range(2):
-            self.fwd()
-            time.sleep(2)
-            self.back()
-            time.sleep(2)
-        self.stop()
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
