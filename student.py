@@ -102,14 +102,11 @@ class Piggy(PiggyParent):
 
     def head_turn(self):
         """turns servo"""
-        self.servo(2000) #look right
-        time.sleep(1)
-        self.servo(1000) #look left
-        time.sleep(1)
-        self.servo(2000) #look right
-        time.sleep(1)
-        self.servo(1000) #look left
-        time.sleep(1)
+        for x in range(4):
+            self.servo(2000) #look right
+            time.sleep(1)
+            self.servo(1000) #look left
+            time.sleep(1)
 
     def spin(self):
         """turns cleanly in a circle"""
