@@ -117,7 +117,9 @@ class Piggy(PiggyParent):
     def drive(self):
         for x in range(2):
             self.fwd()
+            time.sleep(.5)
             self.back()
+            time.sleep(.5)
         self.stop()
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
