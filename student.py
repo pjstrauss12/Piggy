@@ -108,18 +108,20 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.servo(1000) #look left
         time.sleep(1)
+
     def spin(self):
         """turns cleanly in a circle"""
         for x in range(4):
             self.right()
             time.sleep(.5)
         self.stop()
+
     def drive(self):
         for x in range(2):
             self.fwd()
-            time.sleep(.5)
+            time.sleep(2)
             self.back()
-            time.sleep(.5)
+            time.sleep(2)
         self.stop()
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
