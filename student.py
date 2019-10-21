@@ -68,8 +68,6 @@ class Piggy(PiggyParent):
         """turns robot and looks around"""
         self.right()
         time.sleep(.5)
-        self.back()
-        time.sleep(.5)
         self.stop()
         time.sleep(.1)
         self.servo(1000) #look right
@@ -86,7 +84,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.right()
         time.sleep(1)
-        self.stop
+        self.stop()
 
     def turning(self):
         """does some turning"""
@@ -117,7 +115,8 @@ class Piggy(PiggyParent):
         """turns cleanly in a circle"""
         for x in range(4):
             self.right()
-            self.stop()
+            time.sleep(1)
+        self.stop()
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
