@@ -117,7 +117,10 @@ class Piggy(PiggyParent):
         """moves back and right"""
         for x in range(3):
             self.back()
+            time.sleep(1)
             self.right()
+            time.sleep(1)
+        self.stop()
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
