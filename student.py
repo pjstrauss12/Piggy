@@ -57,12 +57,29 @@ class Piggy(PiggyParent):
 
     def dance(self):
         """full dance"""
+        #check to see it's safe
+        if not self.safe_to_dance():
+            print("Not cool.  Not going to dance")
+            return #return closes down method
+        else:
+            print("It's safe to dance!")
         for x in range(3):
             self.fun_dance()
             self.turning()
             self.head_turn()
             self.spin()
         self.servo(2000)
+    
+    def safe_to_dance(self):
+        """does a 360 distance check and returns true if safe"""
+        for x in range(4):
+            for ang in range(1000, 2001, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() < 250:
+                    return False
+            self.turn_by_deg(90)
+        return True
 
     def fun_dance(self):
         """turns robot and looks around"""
