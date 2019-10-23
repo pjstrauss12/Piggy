@@ -65,6 +65,10 @@ class Piggy(PiggyParent):
             print("It's safe to dance!")
         for x in range(3):
             self.turning()
+            self.rotation()
+            self.head_turn()
+            self.spin()
+            self.fun_dance()
         self.servo(2000)
     
     def safe_to_dance(self):
@@ -107,7 +111,7 @@ class Piggy(PiggyParent):
         self.stop()
         self.right()
         time.sleep(1)
-        self.left()
+        self.right()
         time.sleep(1)
         self.right()
         time.sleep(1)
@@ -123,14 +127,14 @@ class Piggy(PiggyParent):
             self.servo(1000) #look left
             time.sleep(1)
 
-    def spin(self):
+    def rotation(self):
         """turns cleanly in a circle"""
         for x in range(4):
             self.right()
             time.sleep(1)
         self.stop()
     
-    def rotation(self):
+    def spin(self):
         for x in range(4):
             self.turn_by_deg(90)
         self.stop()
