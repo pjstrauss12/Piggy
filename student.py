@@ -70,6 +70,7 @@ class Piggy(PiggyParent):
             self.spin()
             self.fun_dance()
         self.servo(2000)
+        print("I'm done dancing!")
     
     def safe_to_dance(self):
         """does a 360 distance check and returns true if safe"""
