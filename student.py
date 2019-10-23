@@ -64,7 +64,7 @@ class Piggy(PiggyParent):
         else:
             print("It's safe to dance!")
         for x in range(3):
-            self.turning()
+            self.break_dance()
             self.rotation()
             self.head_turn()
             self.spin()
@@ -82,7 +82,7 @@ class Piggy(PiggyParent):
             self.turn_by_deg(90)
         return True
 
-    def turning(self):
+    def break_dance(self):
         """does some turning"""
         self.stop()
         self.right()
@@ -111,6 +111,7 @@ class Piggy(PiggyParent):
         self.stop()
     
     def spin(self):
+        """spins in place"""
         for x in range(4):
             self.turn_by_deg(90)
         self.stop()
