@@ -68,7 +68,6 @@ class Piggy(PiggyParent):
             self.rotation()
             self.head_turn()
             self.spin()
-            self.fun_dance()
         self.servo(2000)
         print("I'm done dancing!")
     
@@ -82,30 +81,6 @@ class Piggy(PiggyParent):
                     return False
             self.turn_by_deg(90)
         return True
-
-    def fun_dance(self):
-        """turns robot and looks around"""
-        self.right()
-        time.sleep(.5)
-        self.stop()
-        time.sleep(.1)
-        self.servo(1000) #look right
-        time.sleep(1)
-        self.servo(2000) #look left
-        time.sleep(1)
-        self.servo(1000) #look right
-        time.sleep(1)
-        self.servo(2000)
-        time.sleep(1)
-        self.right()
-        time.sleep(1)
-        self.stop()
-        time.sleep(.1)
-        self.right()
-        time.sleep(1)
-        self.right()
-        time.sleep(1)
-        self.stop()
 
     def turning(self):
         """does some turning"""
