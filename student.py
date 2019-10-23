@@ -73,7 +73,7 @@ class Piggy(PiggyParent):
     def safe_to_dance(self):
         """does a 360 distance check and returns true if safe"""
         for x in range(4):
-            for ang in range(1000, 2001, 100):
+            for ang in range(self.MIDPOINT-400, self.MIDPOINT+100, 100):
                 self.servo(ang)
                 time.sleep(.1)
                 if self.read_distance() < 250:
