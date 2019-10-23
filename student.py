@@ -64,10 +64,7 @@ class Piggy(PiggyParent):
         else:
             print("It's safe to dance!")
         for x in range(3):
-            self.break_dance()
-            self.rotation()
-            self.head_turn()
-            self.spin()
+            self.other_move()
         self.servo(2000)
         print("I'm done dancing!")
     
@@ -115,6 +112,12 @@ class Piggy(PiggyParent):
         for x in range(4):
             self.turn_by_deg(90)
         self.stop()
+    
+    def other_move(self):
+        """moves back and right"""
+        for x in range(3):
+            self.back()
+            self.right()
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
