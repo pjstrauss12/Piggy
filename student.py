@@ -59,7 +59,7 @@ class Piggy(PiggyParent):
         """full dance"""
         #check to see it's safe
         if not self.safe_to_dance():
-            print("Not cool.  Not going to dance")
+            print("Not enough space to dance!")
             return #return closes down method
         else:
             print("It's safe to dance!")
