@@ -64,7 +64,7 @@ class Piggy(PiggyParent):
         else:
             print("It's safe to dance!")
         for x in range(3):
-            self.rotation()
+            self.turning()
         self.servo(2000)
     
     def safe_to_dance(self):
@@ -107,14 +107,13 @@ class Piggy(PiggyParent):
         self.stop()
         self.right()
         time.sleep(1)
-        self.right()
+        self.left()
         time.sleep(1)
         self.right()
         time.sleep(1)
         self.right()
         time.sleep(.5)
         self.stop()
-        time.sleep(.1)
 
     def head_turn(self):
         """turns servo"""
