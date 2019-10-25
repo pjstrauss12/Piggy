@@ -118,8 +118,6 @@ class Piggy(PiggyParent):
         for x in range(3):
             self.back()
             time.sleep(1)
-            self.stop()
-            time.sleep(.1)
             self.right()
             time.sleep(1)
         self.stop()
