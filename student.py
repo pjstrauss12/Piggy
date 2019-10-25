@@ -64,6 +64,10 @@ class Piggy(PiggyParent):
         else:
             print("It's safe to dance!")
         for x in range(3):
+            self.break_dance()
+            self.spin()
+            self.rotation()
+            self.head_turn()
             self.other_move()
         self.servo(2000)
         print("I'm done dancing!")
