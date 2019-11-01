@@ -155,10 +155,11 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
-        while self.read_distance() > 250:
-            self.fwd()
-            time.sleep(.01)
-        self.turn_by_degree(90)
+        while True:    
+            while self.read_distance() > 250:
+                self.fwd()
+                time.sleep(.01)
+            self.turn_by_degree(50)
 
 
 
