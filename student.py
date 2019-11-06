@@ -160,6 +160,26 @@ class Piggy(PiggyParent):
                 self.fwd()
                 time.sleep(.01)
             self.turn_by_deg(50)
+        self.scan()
+        # traversal
+        left_total = 0
+        left_count = 0
+        right_total = 0
+        right_count = 0
+        for ang, dist in enumerate(self.scan_data):
+            if ang < self.MIDPOINT:
+                right_total +=dist
+                right_count += 1
+            else:
+                left_total += dist
+                left_count += 1
+        left_avg = left_total / left_count
+        right_avg = right_total / right_count
+        if left_avg > right_avg:
+            self.turn_by_deg(-90)
+        else:
+            self.turn_by_deg(90)
+
 
 
 
