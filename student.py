@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
                 self.turn_by_deg(-90)
             else:
                 self.turn_by_deg(90)
-            self.servo(MIDPOINT)
+            self.servo(self.MIDPOINT)
 
 
 
