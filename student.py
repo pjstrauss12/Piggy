@@ -184,9 +184,9 @@ class Piggy(PiggyParent):
             left_avg = left_total / left_count
             right_avg = right_total / right_count
             if left_avg > right_avg:
-                self.turn_by_deg(-90)
+                self.turn_by_deg(-45)
             else:
-                self.turn_by_deg(90)
+                self.turn_by_deg(45)
             self.servo(self.MIDPOINT)
 
 
