@@ -168,11 +168,7 @@ class Piggy(PiggyParent):
             self.look_for_stuff()
             corner_count += 1
             self.get_me_out_now()
-            # traversal
-            left_total = 0
-            left_count = 0
-            right_total = 0
-            right_count = 0
+            
             
             
     def get_me_out_now(self):
@@ -182,6 +178,11 @@ class Piggy(PiggyParent):
     
     def look_for_stuff(self):
         """Looks left and right, counts obstacles and determines to go left or right"""
+        # traversal
+        left_total = 0
+        left_count = 0
+        right_total = 0
+        right_count = 0
         for ang, dist in self.scan_data.items():
                 if ang < self.MIDPOINT:
                     right_total +=dist
