@@ -155,6 +155,7 @@ class Piggy(PiggyParent):
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
+        """If it does not see anything in 250 mm, it drives forward"""
         while True:    
             while self.read_distance() > 250:
                 self.fwd()
@@ -166,6 +167,7 @@ class Piggy(PiggyParent):
             left_count = 0
             right_total = 0
             right_count = 0
+            # looks right and left, averages distance, decides which direction is better
             for ang, dist in self.scan_data.items():
                 if ang < self.MIDPOINT:
                     right_total +=dist
