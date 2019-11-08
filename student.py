@@ -156,12 +156,18 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         """If it does not see anything in 250 mm, it drives forward"""
+        corner_count = 0
+        started_at = self.get_heading()
         while True:    
             while self.read_distance() > 250:
+                corner_count = 0
                 self.fwd()
                 time.sleep(.01)
             self.stop()
             self.scan()
+            corner_count += 1
+            if corner_count > 5:
+                self.turn_by_deg(180)
             # traversal
             left_total = 0
             left_count = 0
