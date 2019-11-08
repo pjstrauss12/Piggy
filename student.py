@@ -165,6 +165,7 @@ class Piggy(PiggyParent):
                 time.sleep(.01)
             self.stop()
             self.scan()
+            self.look_for_stuff()
             corner_count += 1
             self.get_me_out_now()
             # traversal
@@ -172,7 +173,7 @@ class Piggy(PiggyParent):
             left_count = 0
             right_total = 0
             right_count = 0
-            self.look_for_stuff()
+            
             
     def get_me_out_now(self):
         """If stuck, turns robot around to get it out of a trap"""
