@@ -166,15 +166,22 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             corner_count += 1
-            if corner_count > 5:
-                self.turn_by_deg(180)
+            self.get_me_out_now()
             # traversal
             left_total = 0
             left_count = 0
             right_total = 0
             right_count = 0
-            # looks right and left, averages distance, decides which direction is better
-            for ang, dist in self.scan_data.items():
+            self.look_for_stuff()
+            
+    def get_me_out_now(self):
+        """If stuck, turns robot around to get it out of a trap"""
+        if corner_count > 5:
+            self.turn_by_deg(180)
+    
+    def look_for_stuff(self):
+        """Looks left and right, counts obstacles and determines to go left or right"""
+        for ang, dist in self.scan_data.items():
                 if ang < self.MIDPOINT:
                     right_total +=dist
                     right_count += 1
