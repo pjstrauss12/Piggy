@@ -183,6 +183,7 @@ class Piggy(PiggyParent):
         """If stuck, turns robot around to get it out of a trap"""
         corner_count = 0
         trigger_distance = 250
+        found_something = False #trigger
         starting_position = self.get_heading() #write down starting position
         while self.get_heading() != starting_position:
             if self.read_distance < trigger_distance and not found_something:
