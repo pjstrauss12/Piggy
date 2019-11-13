@@ -166,14 +166,14 @@ class Piggy(PiggyParent):
             self.stop()
             self.scan()
             corner_count += 1
-            self.get_me_out_now()
             self.look_for_stuff()
+            self.get_me_out_now()
+            
             
             
             
     def get_me_out_now(self):
         """If stuck, turns robot around to get it out of a trap"""
-        corner_count = 0
         if corner_count > 5:
             self.turn_by_deg(180)
     
