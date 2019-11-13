@@ -169,7 +169,7 @@ class Piggy(PiggyParent):
         corner_count = 0
         started_at = self.get_heading()
         while True:    
-            while self.quick_check() > 250:
+            while self.quick_check():
                 corner_count = 0
                 self.fwd()
                 time.sleep(.01)
