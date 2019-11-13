@@ -20,6 +20,7 @@ class Piggy(PiggyParent):
         self.LEFT_DEFAULT = 80
         self.RIGHT_DEFAULT = 80
         self.SAFE_DIST = 350
+        self.corner_count = 0
         self.MIDPOINT = 1200  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
         
@@ -166,11 +167,11 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         """If it does not see anything in 250 mm, it drives forward"""
-        corner_count = 0
+        self.corner_count()
         started_at = self.get_heading()
         while True:    
             while self.quick_check():
-                corner_count = 0
+                self.corner_count()
                 self.fwd()
                 time.sleep(.01)
             self.stop()
@@ -181,7 +182,7 @@ class Piggy(PiggyParent):
             
     def get_me_out_now(self):
         """If stuck, turns robot around to get it out of a trap"""
-        corner_count = 0
+        self.corner_count()
         if corner_count > 5:
             self.turn_by_deg(180)
     
