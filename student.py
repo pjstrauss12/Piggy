@@ -167,23 +167,23 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         """If it does not see anything in 250 mm, it drives forward"""
-        self.corner_count()
+        self.corner_count
         started_at = self.get_heading()
         while True:    
             while self.quick_check():
-                self.corner_count()
+                self.corner_count
                 self.fwd()
                 time.sleep(.01)
             self.stop()
             self.scan()
-            corner_count += 1
+            self.corner_count += 1
             self.look_for_stuff()
             self.get_me_out_now()
             
     def get_me_out_now(self):
         """If stuck, turns robot around to get it out of a trap"""
-        self.corner_count()
-        if corner_count > 5:
+        self.corner_count
+        if self.corner_count > 5:
             self.turn_by_deg(180)
     
     def look_for_stuff(self):
