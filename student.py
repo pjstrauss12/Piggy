@@ -185,7 +185,7 @@ class Piggy(PiggyParent):
         self.corner_count
         if self.corner_count > 5:
             self.turn_by_deg(180)
-        corner_count = 0
+        self.corner_count
     
     def look_for_stuff(self):
         """Looks left and right, counts obstacles and determines to go left or right"""
