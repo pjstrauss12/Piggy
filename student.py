@@ -167,6 +167,7 @@ class Piggy(PiggyParent):
         print("-------- [ Press CTRL + C to stop me ] --------\n")
         print("-----------! NAVIGATION ACTIVATED !------------\n")
         """If it does not see anything in 250 mm, it drives forward"""
+        self.servo(self.MIDPOINT)
         self.corner_count
         started_at = self.get_heading()
         while True:    
