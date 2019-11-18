@@ -186,7 +186,7 @@ class Piggy(PiggyParent):
         """If stuck, turns robot around to get it out of a trap"""
         self.corner_count
         if self.corner_count > 5:
-            self.turn_by_deg(180)
+            self.turn_by_deg(135)
         
     
     def look_for_stuff(self):
