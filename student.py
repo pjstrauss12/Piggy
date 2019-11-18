@@ -185,7 +185,7 @@ class Piggy(PiggyParent):
     def get_me_out_now(self):
         """If stuck, turns robot around to get it out of a trap"""
         self.corner_count
-        if self.corner_count > 5:
+        if self.corner_count > 5: #if robot turns more than 5 times, this method activates where it will turn out of it
             self.turn_by_deg(135)
         
     
@@ -205,10 +205,10 @@ class Piggy(PiggyParent):
                     left_count += 1
         left_avg = left_total / left_count
         right_avg = right_total / right_count
-        if left_avg > right_avg:
-            self.turn_by_deg(-45)
+        if left_avg > right_avg: #if the left has a longer distance, it will turn left
+            self.turn_by_deg(-45) 
         else:
-            self.turn_by_deg(45)
+            self.turn_by_deg(45) #if right distance is greater, it will turn right
         self.servo(self.MIDPOINT)
 
 
