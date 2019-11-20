@@ -182,7 +182,7 @@ class Piggy(PiggyParent):
             self.get_me_out_now()
             self.corner_count
             
-    def get_me_out_now(self):
+    def get_me_out(self):
         """If stuck, turns robot around to get it out of a trap"""
         self.corner_count
         if self.corner_count > 5: #if robot turns more than 5 times, this method activates where it will turn out of it
