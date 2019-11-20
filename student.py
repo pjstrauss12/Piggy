@@ -172,12 +172,12 @@ class Piggy(PiggyParent):
         started_at = self.get_heading()
         while True:    
             while self.quick_check():
-                self.corner_count
-                self.fwd()
+                self.corner_count #pulls up current corner_count
+                self.fwd() #goes forward and costantly checks for objects
                 time.sleep(.01)
             self.stop()
             self.scan()
-            self.corner_count += 1
+            self.corner_count += 1 #if there is an object, one will be added to corner_count, see get_me_out method
             self.look_for_stuff()
             self.get_me_out ()
             self.corner_count
@@ -187,7 +187,7 @@ class Piggy(PiggyParent):
         self.corner_count
         if self.corner_count > 5: #if robot turns more than 5 times, this method activates where it will turn out of it
             self.turn_by_deg(135)
-            self.corner_count = 0
+            self.corner_count = 0 #resets corner_count so robot will not continuously spin 135 degrees
         
     
     def look_for_stuff(self):
