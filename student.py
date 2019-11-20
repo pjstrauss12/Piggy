@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
             self.scan()
             self.corner_count += 1
             self.look_for_stuff()
-            self.get_me_out_now()
+            self.get_me_out()
             self.corner_count
             
     def get_me_out(self):
