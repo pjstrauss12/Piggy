@@ -187,6 +187,7 @@ class Piggy(PiggyParent):
         self.corner_count
         if self.corner_count > 5: #if robot turns more than 5 times, this method activates where it will turn out of it
             self.turn_by_deg(135)
+            self.corner_count = 0
         
     
     def look_for_stuff(self):
