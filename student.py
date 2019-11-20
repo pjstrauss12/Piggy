@@ -17,8 +17,8 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 80
-        self.RIGHT_DEFAULT = 80
+        self.LEFT_DEFAULT = 100
+        self.RIGHT_DEFAULT = 100
         self.SAFE_DIST = 350
         self.corner_count = 0
         self.MIDPOINT = 1600  # what servo command (1000-2000) is straight forward for your bot?
@@ -179,7 +179,7 @@ class Piggy(PiggyParent):
             self.scan()
             self.corner_count += 1
             self.look_for_stuff()
-            self.get_me_out()
+            self.get_me_out ()
             self.corner_count
             
     def get_me_out(self):
