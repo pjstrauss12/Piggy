@@ -211,6 +211,7 @@ class Piggy(PiggyParent):
         else:
             self.turn_by_deg(45) #if right distance is greater, it will turn right
         self.servo(self.MIDPOINT)
+        self.corner_count #resets corner_count to 0 so robot does not spin too much when unnecessary
 
 
 
