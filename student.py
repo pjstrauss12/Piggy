@@ -40,6 +40,7 @@ class Piggy(PiggyParent):
         menu = {"n": ("Navigate", self.nav),
                 "d": ("Dance", self.dance),
                 "o": ("Obstacle count", self.obstacle_count),
+                "h": ("Hold Position". self.hold_position),
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit)
                 }
@@ -212,6 +213,11 @@ class Piggy(PiggyParent):
             self.turn_by_deg(45) # if right distance is greater, it will turn right
         self.servo(self.MIDPOINT)
         self.corner_count # resets corner_count to 0 so robot does not spin too much when unnecessary
+    
+    def hold_position(self):
+        started_at = self.get_heading()
+        if started_at != self.get_heading():
+            self.turn_by_deg(self.get_heading)
 
 
 
