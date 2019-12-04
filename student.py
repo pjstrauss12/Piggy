@@ -215,10 +215,10 @@ class Piggy(PiggyParent):
         self.corner_count # resets corner_count to 0 so robot does not spin too much when unnecessary
     
     def hold_position(self):
-        started_at = self.get_heading()
+        starting_position = self.get_heading()
         while True:
-            if started_at != self.get_heading():
-                self.turn_by_deg(self.get_heading)
+            if starting_position != self.get_heading():
+                self.turn_to_deg(self.get_heading)
 
 
 
