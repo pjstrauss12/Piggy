@@ -219,6 +219,7 @@ class Piggy(PiggyParent):
         while True:
             if starting_position != self.get_heading():
                 self.turn_to_deg(starting_position)
+                self.stop()
 
 
 
