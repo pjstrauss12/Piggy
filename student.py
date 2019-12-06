@@ -180,7 +180,7 @@ class Piggy(PiggyParent):
             self.scan()
             self.corner_count += 1 # if there is an object, one will be added to corner_count, see get_me_out method
             self.look_for_stuff()
-            self.get_me_out ()
+            self.get_me_out()
             self.corner_count # resets corner_count to 0 so it does not repeatedly go in circles when it wants to turn
             
     def get_me_out(self):
