@@ -222,6 +222,7 @@ class Piggy(PiggyParent):
             if abs(starting_position-new_ang) > 20:
                 self.turn_to_deg(starting_position)
                 self.stop()
+                print("I made it back!")
 
 
 
