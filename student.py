@@ -182,6 +182,7 @@ class Piggy(PiggyParent):
             self.look_for_stuff()
             self.get_me_out()
             self.corner_count # resets corner_count to 0 so it does not repeatedly go in circles when it wants to turn
+            self.escape()
             
     def get_me_out(self):
         """If stuck, turns robot around to get it out of a trap"""
@@ -213,6 +214,13 @@ class Piggy(PiggyParent):
             self.turn_by_deg(45) # if right distance is greater, it will turn right
         self.servo(self.MIDPOINT)
         self.corner_count # resets corner_count to 0 so robot does not spin too much when unnecessary
+
+    def escape(self):
+        exit_place = self.read_distance > 200
+        start_time = time.time()
+        elapsed_time = time.time() - start_time
+        if elapsed_time > 100:
+            self.turn_to_deg(exit_place)
     
     def hold_position(self):
         starting_position = self.get_heading()
