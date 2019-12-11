@@ -216,10 +216,10 @@ class Piggy(PiggyParent):
         self.corner_count # resets corner_count to 0 so robot does not spin too much when unnecessary
 
     def escape(self):
-        exit_place = self.read_distance > 200
+        exit_place = self.read_distance > 500
         start_time = time.time()
         elapsed_time = time.time() - start_time
-        if elapsed_time > 100:
+        if elapsed_time > 250:
             self.turn_to_deg(exit_place)
     
     def hold_position(self):
