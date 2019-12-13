@@ -226,7 +226,7 @@ class Piggy(PiggyParent):
                 print("I made it back!")
 
     def nope(self):
-        if self.corner_count > 5:
+        if self.corner_count < 4:
             return False
         else:
             print("I don't like this")
