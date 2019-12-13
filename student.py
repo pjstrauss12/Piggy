@@ -227,6 +227,8 @@ class Piggy(PiggyParent):
 
     def nope(self):
         if self.corner_count > 5:
+            return False
+        else:
             print("I don't like this")
             if self.read_distance() < self.SAFE_DIST:
                 self.turn_by_deg(180)
