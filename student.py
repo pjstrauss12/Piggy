@@ -226,10 +226,12 @@ class Piggy(PiggyParent):
                 print("I made it back!")
 
     def nope(self):
-        if self.read_distance() < self.SAFE_DIST:
-            self.turn_by_deg(180)
-            time.sleep(2)
-            self.turn_by_deg(180)
+        if self.corner_count > 5:
+            print("I don't like this")
+            if self.read_distance() < self.SAFE_DIST:
+                self.turn_by_deg(180)
+                time.sleep(2)
+                self.turn_by_deg(180)
 
 
 
