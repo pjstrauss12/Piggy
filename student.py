@@ -19,7 +19,7 @@ class Piggy(PiggyParent):
         '''
         self.LEFT_DEFAULT = 100 # motor speed
         self.RIGHT_DEFAULT = 95.5 # motor speed
-        self.SAFE_DIST = 350 # how far I have to be from an object to drive
+        self.SAFE_DIST = 500 # how far I have to be from an object to drive
         self.corner_count = 0 # sets how many times the robot turns before get_me_out is activated
         self.MIDPOINT = 1600  # what servo command (1000-2000) is straight forward for your bot?
         self.load_defaults()
