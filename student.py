@@ -177,6 +177,7 @@ class Piggy(PiggyParent):
                 self.fwd() # goes forward and costantly checks for objects
                 time.sleep(.01)
             self.stop()
+            self.nope()
             self.scan()
             self.corner_count += 1 # if there is an object, one will be added to corner_count, see get_me_out method
             self.look_for_stuff()
@@ -223,6 +224,12 @@ class Piggy(PiggyParent):
                 self.turn_to_deg(starting_position)
                 self.stop()
                 print("I made it back!")
+
+    def nope(self):
+        if dist < self.SAFE_DIST:
+            self.turn_by_deg(180)
+            time.sleep(2)
+            self.turn_by_deg(180)
 
 
 
