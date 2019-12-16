@@ -262,7 +262,7 @@ class Piggy(PiggyParent):
             time.sleep(.1)
 
         left_speed = self.LEFT_DEFAULT
-        right speed = self.RIGHT_DEFAULT
+        right_speed = self.RIGHT_DEFAULT
 
 
         #straighten out
