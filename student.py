@@ -268,7 +268,7 @@ class Piggy(PiggyParent):
         #straighten out
         while self.get_heading() != starting_direction:
             #if i need to veer right
-            if self.get_heading() < starting direction:
+            if self.get_heading() < starting_direction:
                 right_speed -= 10
             #if i need to veer left
             elif self.get_heading() > starting_direction:
