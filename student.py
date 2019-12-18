@@ -268,11 +268,11 @@ class Piggy(PiggyParent):
             if self.get_heading() < starting_direction:
                 print("I'm too far left!") # print
                 self.set_motor_power(self.MOTOR_LEFT, 90)
-                self.set_motor_power(self.MOTOR_RIGHT, 70)
+                self.set_motor_power(self.MOTOR_RIGHT, 60)
             #if i need to veer left
             elif self.get_heading() > starting_direction:
                 print("I'm too far right!") # print
-            self.set_motor_power(self.MOTOR_LEFT, 70)
+            self.set_motor_power(self.MOTOR_LEFT, 60)
             self.set_motor_power(self.MOTOR_RIGHT, 90)
             time.sleep(.1)
         print("I think I'm done")
