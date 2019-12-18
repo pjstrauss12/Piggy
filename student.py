@@ -277,7 +277,7 @@ class Piggy(PiggyParent):
                 print("I'm too far right!") # print
                 left_speed -= 10
                 right_speed += 5 # power up opposite
-            self.set_motor_power(self.MOTOR_LEFT, keft_speed)
+            self.set_motor_power(self.MOTOR_LEFT, left_speed)
             self.set_motor_power(self.MOTOR_RIGHT, right_speed)
             time.sleep(.1)
 
